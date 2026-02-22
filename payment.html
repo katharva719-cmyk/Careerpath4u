@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Members Only</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e8f0fe, #ffffff);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background: #4285f4;
+      color: white;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      color: #4285f4;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      background: #34a853;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #2c8a42;
+      transform: scale(1.05);
+    }
+
+    .hidden { display: none; }
+
+    .payment-box img {
+      width: 220px;
+      margin: 20px 0;
+      border: 2px solid #4285f4;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .loading {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      color: #fbbc04;
+    }
+
+    /* ✅ Payment Success Animation */
+    .success-animation {
+      font-size: 2rem;
+      color: #34a853;
+      font-weight: bold;
+      margin-top: 20px;
+      animation: pop 0.8s ease-in-out;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    .checkmark {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: inline-block;
+      border: 4px solid #34a853;
+      position: relative;
+      animation: pop 0.8s ease-in-out;
+    }
+
+    .checkmark::after {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: 10px;
+      width: 20px;
+      height: 40px;
+      border-right: 4px solid #34a853;
+      border-bottom: 4px solid #34a853;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🔒 Secure Premium Access</h1>
+  </header>
+
+  <!-- Login -->
+  <div class="container" id="loginBox">
+    <h2>Login with Gmail</h2>
+    <input type="email" id="email" placeholder="Enter Gmail" required><br>
+    <input type="password" id="password" placeholder="Enter Password" required><br>
+    <button onclick="checkLogin()">Login</button>
+  </div>
+
+  <!-- Payment -->
+  <div class="container hidden" id="paymentBox">
+    <h2>💳 Scan to Pay</h2>
+    <p>Pay only <b>₹1000</b> to access premium roadmap.</p>
+    <div class="payment-box">
+      <img src="Scanner.png" alt="Payment QR">
+    </div>
+    <p class="loading" id="loadingMsg">Waiting for payment...</p>
+  </div>
+
+  <!-- Success -->
+  <div class="container hidden" id="successBox">
+    <div class="checkmark"></div>
+    <div class="success-animation">Payment Successful ✅</div>
+    <p class="welcome">👑 Welcome to Premium Section!</p>
+  </div>
+
+  <script>
+    function checkLogin() {
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+
+      if(email === "" || password === ""){
+        alert("Please enter Gmail and Password!");
+        return;
+      }
+
+      // Dummy "paid users"
+      let paidUsers = ["premium@gmail.com"];
+
+      if (paidUsers.includes(email)) {
+        // Already Paid
+        document.getElementById("loginBox").classList.add("hidden");
+        document.getElementById("successBox").classList.remove("hidden");
+        setTimeout(() => { window.location.href = "RoadMap.html"; }, 4000);
+      } else {
+        // Not paid -> Show QR
+        document.getElementById("loginBox").classList.add("hidden");
+        document.getElementById("paymentBox").classList.remove("hidden");
+
+        // Fake "auto verification" after 5 sec
+        setTimeout(() => {
+          document.getElementById("paymentBox").classList.add("hidden");
+          document.getElementById("successBox").classList.remove("hidden");
+          setTimeout(() => { window.location.href = "RoadMap.html"; }, 4000);
+        }, 5000);
+      }
+    }
+  </script>
+
+</body>
+</html>

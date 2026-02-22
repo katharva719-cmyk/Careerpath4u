@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Path Visualizer - Google Job</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #f9f9f9, #e8f0fe);
+      color: #202124;
+    }
+
+    /* Premium Badge */
+    .premium-badge {
+      position: fixed;
+      top: 5px;
+      left: 15px;
+      background: linear-gradient(90deg, #ffd700, #ffbb00);
+      color: #202124;
+      font-weight: bold;
+      padding: 8px 10px;
+      border-radius: 20px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+      font-size: 1.1rem;
+      z-index: 2000;
+      border: 2px solid #ffec80;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.6);
+    }
+
+    /* Navbar Styles */
+    nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: #202124;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      z-index: 1000;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 1rem 2rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      width: 0%;
+      height: 2px;
+      background: #4285f4;
+      transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    nav ul li a:hover {
+      color: #a6c8ff;
+    }
+
+    nav ul li.active a {
+      color: #4285f4;
+      font-weight: bold;
+    }
+
+    header {
+      background: #4285f4;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+
+    .section.show {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    .section h2 {
+      color: #4285f4;
+      font-size: 1.8rem;
+    }
+
+    .roadmap-step {
+      margin: 20px 0;
+      padding: 15px;
+      border-left: 6px solid #34a853;
+      background: #f1f3f4;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .roadmap-step:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      background: #202124;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Premium Badge -->
+  <div class="premium-badge">👑 PREMIUM</div>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li class="active"><a href="RoadMap.html">RoadMap</a></li>
+      <li><a href="QueBank.html">QueBank</a></li>
+      <li><a href="Quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Career Path Visualizer 🚀</h1>
+    <p>Step-by-step roadmap to land a job at Google</p>
+  </header>
+
+  <div class="section">
+    <h2>1️⃣ Build Strong Foundations</h2>
+    <div class="roadmap-step">Learn programming languages (C++, Java, Python)</div>
+    <div class="roadmap-step">Understand Data Structures & Algorithms</div>
+    <div class="roadmap-step">Master Problem Solving (LeetCode, Codeforces)</div>
+  </div>
+
+  <div class="section">
+    <h2>2️⃣ Advanced Skills</h2>
+    <div class="roadmap-step">System Design (Scalability, Databases, APIs)</div>
+    <div class="roadmap-step">Cloud Computing (GCP, AWS)</div>
+    <div class="roadmap-step">Open Source Contributions & Projects</div>
+  </div>
+
+  <div class="section">
+    <h2>3️⃣ Google Interview Prep</h2>
+    <div class="roadmap-step">Solve 200+ coding problems</div>
+    <div class="roadmap-step">Mock Interviews & Behavioral Prep</div>
+    <div class="roadmap-step">Study Google’s Work Culture</div>
+  </div>
+
+  <div class="section">
+    <h2>4️⃣ Apply & Grow</h2>
+    <div class="roadmap-step">Build an outstanding Resume</div>
+    <div class="roadmap-step">Apply via Referrals & Careers Page</div>
+    <div class="roadmap-step">Keep Learning & Upskilling</div>
+  </div>
+
+  <footer>
+    <p>© 2025 Career Path Visualizer | Made with ❤️ by You</p>
+  </footer>
+
+  <script>
+    // Scroll Animation using IntersectionObserver
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>

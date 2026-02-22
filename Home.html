@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Googleplex</title>
+    <meta charset="utf-8">
+    <meta name="description" content="The full information of Googleplex and job guidance.">
+    <meta name="keywords" content="Googleplex, Interview preparation, Googleplex facilities, Google office locations, Google office contacts.">
+    <meta name="author" content="Atharva Ganesh Kulkarni">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(-45deg, #4b0082, #8a2be2, #da70d6, #ff1493);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://c4.wallpaperflare.com/wallpaper/965/334/486/google-office-building-wallpaper-preview.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Navigation Bar */
+/* Navigation Bar */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.7);   /* solid transparent black */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 0%;
+    height: 2px;
+    background: #ff1493;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #ffb6f9;
+}
+
+/* Active tab style */
+nav li.active a {
+    color: #ff1493;
+    font-weight: 700;
+}
+
+
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-top: 20px;
+        }
+
+        .title h1 {
+            color: #fff;
+            font-size: 70px;
+            text-transform: uppercase;
+            margin-top: 150px;
+            letter-spacing: 5px;
+        }
+
+        .button-group {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        a.btn {
+            text-decoration: none;
+            display: inline-block;
+            padding: 12px 30px;
+            color: #fff;
+            background-color: transparent;
+            border: 1px solid #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.5s ease, color 0.5s ease, transform 0.3s ease;
+        }
+
+        a.btn:hover {
+            background-color: #fff;
+            color: #000;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Special style for Members Only button */
+        a.members-btn {
+            border: 2px solid gold;
+            color: gold;
+        }
+
+        a.members-btn:hover {
+            background-color: gold;
+            color: black;
+            transform: translateY(-6px) scale(1.07);
+            box-shadow: 0 6px 18px rgba(255, 215, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="main">
+            <nav>
+    <ul>
+        <li class="active"><a href="Home.html">Home</a></li>
+        <li><a href="Qualification.html">Qualification</a></li>
+        <li><a href="Interview prepration.html">Interview</a></li>
+        <li><a href="Facilities.html">Facilities</a></li>
+        <li><a href="Contact us.html">Contact us</a></li>
+        <li><a href="Feedback.html">Feedback</a></li>
+    </ul>
+</nav>
+
+            <div class="logo">
+                <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png" alt="Google logo">
+            </div>
+            <div class="title">
+                <h1>Googleplex</h1>
+            </div>
+            <div class="button-group">
+                <a href="https://youtu.be/vq7LO0wIBsI?si=GtfYq3RbmS-USsi9" class="btn">Watch Video</a>
+                <a href="https://en.wikipedia.org/wiki/Googleplex" class="btn">Learn More</a>
+                <!-- New Members Only button -->
+                <a href="payment.html" class="btn members-btn">Members Only</a>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

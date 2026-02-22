@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Interview Question Bank</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #f9f9f9, #e8f0fe);
+      color: #202124;
+    }
+
+    /* Premium Badge */
+    .premium-badge {
+      position: fixed;
+      top: 2px;
+      left: 15px;
+      background: linear-gradient(90deg, #ffd700, #ffbb00);
+      color: #202124;
+      font-weight: bold;
+      padding: 8px 10px;
+      border-radius: 20px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+      font-size: 1.1rem;
+      z-index: 2000;
+      border: 2px solid #ffec80;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.6);
+    }
+
+
+    /* -------- NAVBAR -------- */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #202124;
+      padding: 0.8rem 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: #4285f4;
+      transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    nav ul li a:hover {
+      color: #4285f4;
+    }
+
+    /* -------- HEADER -------- */
+    header {
+      background: #4285f4;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* -------- SECTIONS -------- */
+    .section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+
+    .section.show {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    .section h2 {
+      color: #4285f4;
+      margin-bottom: 15px;
+    }
+
+    .question {
+      margin: 10px 0;
+      padding: 12px;
+      border-left: 5px solid #34a853;
+      background: #f1f3f4;
+      border-radius: 6px;
+      transition: transform 0.3s ease;
+    }
+
+    .question:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      background: #202124;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Premium Badge -->
+  <div class="premium-badge">👑 PREMIUM</div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <ul>
+      <li><a href="RoadMap.html">RoadMap</a></li>
+      <li><a href="#question-bank">Question Bank</a></li>
+      <li><a href="Quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Google Interview Question Bank 💡</h1>
+    <p>100+ Frequently Asked Google Interview Questions</p>
+  </header>
+
+  <!-- QUESTION BANK -->
+  <div class="section" id="question-bank">
+    <h2>📘 Data Structures & Algorithms</h2>
+    <div class="question">1. Implement LRU Cache</div>
+    <div class="question">2. Find median of two sorted arrays</div>
+    <div class="question">3. Longest substring without repeating characters</div>
+    <div class="question">4. Detect cycle in a directed graph</div>
+    <div class="question">5. Merge k sorted linked lists</div>
+    <div class="question">6. Word Break Problem</div>
+    <div class="question">7. Minimum Window Substring</div>
+    <div class="question">8. Kth largest element in an array</div>
+    <div class="question">9. Trapping Rain Water</div>
+    <div class="question">10. Design Twitter / News Feed System</div>
+    <!-- तुम्ही असेच 50+ DSA questions टाकू शकता -->
+  </div>
+
+  <div class="section">
+    <h2>🖥️ System Design</h2>
+    <div class="question">1. Design Google Search Engine</div>
+    <div class="question">2. Design YouTube Recommendation System</div>
+    <div class="question">3. Design a URL Shortener like bit.ly</div>
+    <div class="question">4. Design a scalable chat application</div>
+    <div class="question">5. Design Google Docs (collaborative editing)</div>
+    <div class="question">6. Design Gmail (Email System)</div>
+    <div class="question">7. Design Google Drive (Cloud Storage)</div>
+    <div class="question">8. Design an API Rate Limiter</div>
+    <div class="question">9. Design Uber / Ola backend</div>
+    <div class="question">10. Design YouTube Live Streaming</div>
+  </div>
+
+  <div class="section">
+    <h2>👔 Behavioral Questions</h2>
+    <div class="question">1. Tell me about a time you solved a challenging problem?</div>
+    <div class="question">2. How do you handle conflicts in a team?</div>
+    <div class="question">3. Describe a situation where you failed. What did you learn?</div>
+    <div class="question">4. Why do you want to work at Google?</div>
+    <div class="question">5. Which Google product do you use most and how would you improve it?</div>
+    <div class="question">6. How do you prioritize tasks when under pressure?</div>
+    <div class="question">7. Tell me about a time you showed leadership.</div>
+    <div class="question">8. Describe a time when you had to make a tough decision.</div>
+  </div>
+
+  <div class="section">
+    <h2>🔍 Google Specific Questions</h2>
+    <div class="question">1. How would you improve Google Maps for blind users?</div>
+    <div class="question">2. How would you optimize Google Search for speed?</div>
+    <div class="question">3. Suggest new features for Google Chrome.</div>
+    <div class="question">4. How would you make YouTube safer for kids?</div>
+    <div class="question">5. How will AI change Google’s future?</div>
+  </div>
+
+  <footer>
+    <p>© 2025 Google Interview Question Bank | Made with ❤️ by You</p>
+  </footer>
+
+  <script>
+    // Scroll Animation
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>

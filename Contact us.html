@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Office Locations</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(-45deg, #4b0082, #8a2be2, #da70d6, #ff1493);
+        background-size: 400% 400%;
+        animation: gradient-animation 15s ease infinite;
+        color: #e2e8f0;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @keyframes gradient-animation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Navigation Bar */
+    nav {
+        background-color: rgba(30, 41, 59, 0.8);
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 1rem 1.5rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-weight: 600;
+    }
+
+    nav li a:hover {
+        background-color: #334155;
+    }
+
+    nav li.active a {
+        background-color: #4a5568;
+        color: #ff1493;
+    }
+    
+    /* Table Styling */
+    .container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+    }
+    table {
+        border-collapse: collapse;
+        width: 80%;
+        max-width: 800px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(6px);
+        border-radius: 10px;
+        overflow: hidden;
+        animation: fadeIn 1s ease-in-out;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    th {
+        background: rgba(0, 0, 0, 0.3);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    tr {
+        transform: translateY(20px);
+        opacity: 0;
+        animation: slideIn 0.6s ease forwards;
+    }
+    tr:nth-child(1) { animation-delay: 0.1s; }
+    tr:nth-child(2) { animation-delay: 0.2s; }
+    tr:nth-child(3) { animation-delay: 0.3s; }
+    tr:nth-child(4) { animation-delay: 0.4s; }
+    tr:nth-child(5) { animation-delay: 0.5s; }
+    tr:nth-child(6) { animation-delay: 0.6s; }
+    tr:nth-child(7) { animation-delay: 0.7s; }
+    tr:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transition: background 0.3s ease;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes slideIn {
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Qualification.html">Qualification</a></li>
+        <li><a href="Interview prepration.html">Interview Prep</a></li>
+        <li><a href="Facilities.html">Facilities</a></li>
+        <li><a href="RoadMap.html">RoadMap</a></li>
+        <li class="active"><a href="Contact us.html">Contact us</a></li>
+        <li><a href="Feedback.html">Feedback</a></li>
+    </ul>
+</nav>
+
+<!-- Table -->
+<div class="container">
+<table>
+    <thead>
+        <tr>
+            <th>Sr No.</th>
+            <th>Google Head</th>
+            <th>Contact Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>01</td>
+            <td>Google Bangalore</td>
+            <td>+91 8067218000</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Google Gurugram</td>
+            <td>+91 1244512900</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Google Hyderabad</td>
+            <td>+91 4066195000</td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>Google Pune</td>
+            <td>+91 2040152000</td>
+        </tr>
+        <tr>
+            <td>05</td>
+            <td>Google Mumbai</td>
+            <td>+91 2244238000</td>
+        </tr>
+        <tr>
+            <td>06</td>
+            <td>Google Delhi</td>
+            <td>+91 1145678900</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+</body>
+</html>
