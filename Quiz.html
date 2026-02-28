@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Interview Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #e8f0fe, #ffffff);
+      color: #202124;
+    }
+
+    header {
+      background: #4285f4;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    /* Premium Badge */
+    .premium-badge {
+      position: fixed;
+      top: 5px;
+      left: 15px;
+      background: linear-gradient(90deg, #ffd700, #ffbb00);
+      color: #202124;
+      font-weight: bold;
+      padding: 8px 10px;
+      border-radius: 20px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+      font-size: 1.1rem;
+      z-index: 2000;
+      border: 2px solid #ffec80;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.6);
+    }
+
+
+    /* Nav Bar */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #202124;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: #4285f4;
+      color: #fff;
+    }
+
+    .quiz-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .question h3 {
+      margin-bottom: 10px;
+      color: #4285f4;
+    }
+
+    .options label {
+      display: block;
+      background: #f1f3f4;
+      margin: 6px 0;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .options label:hover {
+      background: #d2e3fc;
+    }
+
+    button {
+      background: #34a853;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: transform 0.2s ease, background 0.3s;
+    }
+
+    button:hover {
+      background: #2c8a42;
+      transform: scale(1.05);
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    #result.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Return Home Button */
+    .home-btn {
+      display: block;
+      margin: 30px auto;
+      background: #4285f4;
+      padding: 12px 22px;
+      text-align: center;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      width: fit-content;
+      transition: 0.3s ease;
+      animation: bounce 2s infinite;
+    }
+
+    .home-btn:hover {
+      background: #0b66c3;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Premium Badge -->
+  <div class="premium-badge">👑 PREMIUM</div>
+
+  <header>
+    <h1>Google Interview Quiz 🎯</h1>
+    <p>Test your knowledge before the big interview!</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="RoadMap.html">Roadmap</a></li>
+      <li><a href="#">Question Bank</a></li>
+      <li><a href="#">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <div class="quiz-container">
+    <form id="quizForm">
+      <div class="question">
+        <h3>1️⃣ What is the time complexity of binary search?</h3>
+        <div class="options">
+          <label><input type="radio" name="q1" value="O(log n)"> O(log n)</label>
+          <label><input type="radio" name="q1" value="O(n)"> O(n)</label>
+          <label><input type="radio" name="q1" value="O(n log n)"> O(n log n)</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>2️⃣ Which data structure is used in BFS?</h3>
+        <div class="options">
+          <label><input type="radio" name="q2" value="Stack"> Stack</label>
+          <label><input type="radio" name="q2" value="Queue"> Queue</label>
+          <label><input type="radio" name="q2" value="Tree"> Tree</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>3️⃣ Which sorting algorithm is fastest on average?</h3>
+        <div class="options">
+          <label><input type="radio" name="q3" value="Bubble Sort"> Bubble Sort</label>
+          <label><input type="radio" name="q3" value="Quick Sort"> Quick Sort</label>
+          <label><input type="radio" name="q3" value="Selection Sort"> Selection Sort</label>
+        </div>
+      </div>
+
+      <button type="button" onclick="calculateScore()">Submit Quiz</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <!-- Return Home Button -->
+  <a href="Home.html" class="home-btn">🏠 Return Home</a>
+
+  <script>
+    function calculateScore() {
+      let score = 0;
+      const answers = {
+        q1: "O(log n)",
+        q2: "Queue",
+        q3: "Quick Sort"
+      };
+
+      for (let q in answers) {
+        let selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === answers[q]) {
+          score++;
+        }
+      }
+
+      let result = document.getElementById("result");
+      result.textContent = "✨ Your Score: " + score + "/3";
+      result.classList.add("show");
+    }
+  </script>
+
+</body>
+</html>

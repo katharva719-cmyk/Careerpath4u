@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Googleplex Facilities</title>
+    <meta name="description" content="Information about facilities and job guidance at Googleplex.">
+    <meta name="keywords" content="Googleplex, Interview preparation, Google office facilities, Google office locations, Google contact information.">
+    <meta name="author" content="Atharva Ganesh Kulkarni">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Body and Background Styling */
+        body {
+            background-image: linear-gradient(rgba(210, 56, 138, 0.5), rgba(0, 0, 0, 0.7)), url('https://ssnursing.co.in/facilities/');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevents horizontal scrollbar */
+        }
+
+        /* Header and Navigation */
+        .main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 45px;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+        }
+
+        .main ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main ul li {
+            margin-left: 30px;
+            animation: fadeInDown 1s ease-out;
+            animation-delay: var(--animation-delay);
+        }
+
+        .main ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .main ul li a:hover,
+        .main ul li.active a {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        /* Heading and Separators */
+        hr {
+            border: none;
+            border-top: 2px solid #fff;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            margin: 40px 0;
+            font-size: 2.5rem;
+            color: #ffcc00; /* Google-like color */
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        /* Facilities Section */
+        .facility-container {
+            width: 85%;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .facility-item {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+            animation-delay: var(--item-delay);
+        }
+
+        .facility-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .facility-item img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .facility-item img:hover {
+            transform: scale(1.05) rotate(2deg);
+            border-color: #ffcc00;
+        }
+
+        .facility-text {
+            flex: 1;
+        }
+
+        .facility-text h3 {
+            font-size: 1.8rem;
+            color: #ffcc00;
+            margin-top: 0;
+        }
+
+        .facility-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="logo">
+            <img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png" alt="Google Logo">
+        </div>
+        <ul style="--animation-delay: 0s;">
+            <li style="--animation-delay: 0.1s;"><a href="Googleplex.com.html">Home</a></li>
+            <li style="--animation-delay: 0.2s;"><a href="Qualification.html">Qualification</a></li>
+            <li style="--animation-delay: 0.3s;"><a href="Interview prepration.html">Interview</a></li>
+            <li class="active" style="--animation-delay: 0.4s;"><a href="Facilities.html">Facilities</a></li>
+            <li style="--animation-delay: 0.7s;"><a href="Contact us.html">Contacts</a></li>
+            <li style="--animation-delay: 0.8s;"><a href="Feedback.html">Feedback</a></li>
+        </ul>
+    </div>
+
+    <hr>
+    <h1>What Facilities We Give You</h1>
+    <hr>
+
+    <div class="facility-container">
+        <div class="facility-item" style="--item-delay: 0.2s;">
+            <div class="facility-text">
+                <h3>1) Free Food</h3>
+                <p>Google provides free, gourmet food for all its employees, known as "Googlers." If a Googler brings their dog to the office, their pet gets the special name "Doogler."</p>
+            </div>
+            <img src="https://miro.medium.com/max/1260/1*GFNkgvGX3ALRxRxgZB9pNQ.jpeg" alt="Google free food">
+        </div>
+
+        <div class="facility-item" style="--item-delay: 0.4s;">
+            <div class="facility-text">
+                <h3>2) Relax House</h3>
+                <p>Designed for unwinding, the "Relax House" is a dedicated space where employees can take a break from work and recharge their minds and bodies. </p>
+            </div>
+            <img src="https://img.etimg.com/thumb/msid-57187265,width-640,resizemode-4,imgsize-53892/dublin-office.jpg" alt="Google Relax House">
+        </div>
+        
+        <div class="facility-item" style="--item-delay: 0.6s;">
+            <div class="facility-text">
+                <h3>3) Gym and Medical Health</h3>
+                <p>Your well-being is a priority. Google offers on-site gyms and comprehensive medical facilities to ensure employees are both physically and mentally fit to work happily.</p>
+            </div>
+            <img src="https://www.intowellness.in/wp-content/uploads/2019/09/googleindiagym2.jpg" alt="Google gym">
+        </div>
+
+        <div class="facility-item" style="--item-delay: 0.8s;">
+            <div class="facility-text">
+                <h3>4) Work from Home</h3>
+                <p>Google provides its employees with the flexibility to work from home, allowing for a better work-life balance and a comfortable working environment.</p>
+            </div>
+            <img src="https://staticlearn.shine.com/l/m/images/blog/mobile/work_from_home_jobs_for_housewives.webp" alt="Work from home">
+        </div>
+        
+        <div class="facility-item" style="--item-delay: 1.0s;">
+            <div class="facility-text">
+                <h3>5) Death Benefit</h3>
+                <p>In the unfortunate event of an employee's passing, Google provides significant support to their family. This includes 50% of their salary for a decade and a monthly stipend of $1,000 for each child until they turn 19.</p>
+            </div>
+            <img src="https://st.depositphotos.com/2036077/2629/i/600/depositphotos_26295427-stock-photo-3d-50-percent-sign.jpg" alt="50 percent salary">
+        </div>
+        
+        <div class="facility-item" style="--item-delay: 1.2s;">
+            <div class="facility-text">
+                <h3>6) Independent Work Culture</h3>
+                <p>At Google, we believe in a no-pressure work environment. Employees are encouraged to work independently, fostering creativity and a positive, autonomous atmosphere.</p>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmY3aw3-V-a8SoKKGXZaNqasTuflehFsS6ZoMvMn7RCdU4ClK_O8L4HRQRImZwkhGDq-I&usqp=CAU" alt="Independent work">
+        </div>
+    </div>
+</body>
+</html>
